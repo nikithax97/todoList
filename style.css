@@ -1,0 +1,161 @@
+:root{
+--primary-color: #3498db;
+--secondary-color: #2980b9;
+--danger-color: #e74c3c;
+--success-color: #2ecc71;
+--text-color: #333;
+--light-gray: #f5f5f5;
+--medium-gray: #ddd;
+--dark-gray: #888;
+--white: #fff;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(100deg, rgb(126, 200, 246),  #e07a6e 100%);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.container{
+    background-color: var(--white);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    border-radius: 12px;
+}
+h1{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+h1 i{
+    margin-right: 10px;
+}
+.input-container{
+    display: flex;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.input-container input{
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 2px solid var(--medium-gray);
+    border-radius: 6px 0 0 6px;
+    font-size: 1rem;
+}
+.input-container input:focus{
+    outline: none;
+    border-color: var(--primary-color);
+}
+.input-container button {
+    padding: 12px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 6px 6px 0;
+    background-color: var(--primary-color);
+    transition: background-color 0.3s;
+}
+.input-container buttonP:hover{
+    background-color: var(--secondary-color);
+}
+.filters {
+    display: flex;
+    justify-content: center;
+    background-color: var(--light-gray);
+    border-bottom: 1px solid var(--medium-gray);
+    padding: 10px;
+}
+.filter-btn {
+    padding: 8px 16px;
+    color: var(--dark-gray);
+    border: none;
+    border-radius: 4px;
+    background: none;
+    margin: 0 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.filter-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+ul {
+    border-bottom: 1px solid var(--medium-gray);
+    border-top: 1px solid var(--medium-gray);
+    height: 400px;
+    list-style: none;
+}
+ul li {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--medium-gray);
+}
+ul li:hover {
+    background-color: var(--light-gray);
+}
+ul li input{
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--success-color);
+}
+ul li span {
+    flex-grow: 1;
+    word-break: break-word;
+}
+ul li span.completed {
+    text-decoration: line-through;
+    color: var(--dark-gray)
+}
+ul li button {
+    color:var(--danger-color);
+    cursor: pointer;
+    padding:5px;
+    visibility:hidden;
+    background: none;
+    border:none;
+}
+ul li:hover button{
+    visibility: visible;
+}
+.list-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--light-gray);
+    border-top: 1px solid var(--medium-gray);
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
+.list-footer button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+}
+.list-footer button:hover{
+    color: var(--danger-color);
+    text-decoration: underline;
+}
+.empty-msg {
+    font-style: italic;
+    color: var(--dark-gray);
+}
